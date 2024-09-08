@@ -17,6 +17,7 @@ const VerifyEmail = ({hideModal}) => {
                 <input className='text-xl text-black font-bold text-center w-[48px] h-[48px] border border-[#9095A0FF] shadow-sm rounded-[4px]' type="number" max={'9'} maxLength='1' />
                 <input className='text-xl text-black font-bold text-center w-[48px] h-[48px] border border-[#9095A0FF] shadow-sm rounded-[4px]' type="number" max={'9'} maxLength='1' />
             </div>
+            <p className='text-[#C12126FF] text-xs mt-[-.7rem]'>Please enter a valid code</p>
             <button className='bg-[#9095A0FF] px-4 py-2 text-white rounded-[8px] hover:bg-[#6E7787FF] duration-500'>Verify</button>
             <p className="countdown mb-[2rem] text-sm">03:25</p>
             <p className='text-sm'>Can't access your student email? <span className='text-gray-500 font-bold cursor-pointer'>Contact support</span></p>
