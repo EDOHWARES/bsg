@@ -12,8 +12,8 @@ import {fileURLToPath} from 'url';
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
 // Function To Read HTML File And Replace Placeholder
 const getEmailTemplate = (filePath, verificationCode) => {
@@ -61,15 +61,11 @@ const registerUser = async (req, res) => {
         //create a random 8 digit code for email verification
         const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
 
-        //hash the verification code
-        const s = await bcryptjs.genSalt(11);
-        const hashedVCode = await bcryptjs.hash(verificationCode, s);
-
         //create and save collections temporarily
         const tempUser = new tempUserModel({
             email: email,
             password: hashedPassword,
-            verificationCode: hashedVCode,
+            verificationCode: verificationCode,
         });
         await tempUser.save();
 
@@ -134,7 +130,7 @@ const verifyEmail = async (req, res) => {
         });
 
         //check if verification code matches
-        const isMatch = await bcryptjs.compare(verificationCode, tempUser.verificationCode);
+        const isMatch = verificationCode == tempUser.verificationCode;
         console.log(isMatch)
         if (!isMatch) {
             return res.json({
