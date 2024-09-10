@@ -17,12 +17,12 @@ const Footer = () => {
             <p className='kaushan text-2xl'>Brainstorm the present, Master the past, <br /> Ace the future!</p>
             </div>
           <ul className='flex flex-col gap-1 text-gray-600'>
+          <li className='cursor-pointer border-b text-gray-800 border-b-[#800e80] duration-500 w-fit'>Visit</li>
             <li className='cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit'>Privacy policy</li>
             <li className='cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit'>Contact us</li>
             <li className='cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit'>Terms and conditions</li>
             <li className='cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit'>Blogs</li>
             <li className='cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit'>About us</li>
-            <li className='cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit'>demo</li>
           </ul>
           <div className='flex flex-col items-center gap-6'>
             <form className='flex flex-col items-start gap-2'>
