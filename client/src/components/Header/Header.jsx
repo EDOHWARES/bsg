@@ -11,7 +11,7 @@ const Header = () => {
             <div className="logo w-[5rem]">
                 <img src={images.logo} alt="logo" />
             </div>
-            <nav className={`absolute ${showMobileNav ? 'block' : 'hidden'} md:block py-8 shadow-2xl top-[4rem] bg-white w-full md:shadow-none md:py-0 md:w-auto md:static`}>
+            <nav className={`absolute ${showMobileNav ? 'block' : 'hidden'} md:block py-8 shadow-2xl top-[3rem] bg-white w-full md:shadow-none md:py-0 md:w-auto md:static`}>
                 <ul className='flex flex-col md:flex-row items-center gap-10 text-gray-600'>
                     <li className='cursor-pointer border-b-2 border-b-transparent hover:border-b-black duration-500'>About</li>
                     <li className='cursor-pointer border-b-2 border-b-transparent hover:border-b-black duration-500'>Contact Us</li>

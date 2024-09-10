@@ -14,23 +14,23 @@ const Signup = () => {
   return (
     <div className='min-h-[80vh]'>
         {showVerifyEmailModal && <VerifyEmail hideModal={() => setShowVerifyEmailModal(false)} />}
-        <div className="content flex items-start justify-between">
-            <div className="img w-[55%] flex flex-col gap-[1.5rem]">
+        <div className="content flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-between">
+            <div className="img w-full md:w-[55%] flex flex-col gap-[1.5rem]">
                 <img className='rounded-[8px] hover:scale-95 duration-500' src={images.students} alt="auth image" />
                 <p className='kaushan text-center text-2xl'>Brainstorm the present, Master the past, Ace the future!</p>
             </div>
-            <form className='border p-4 px-6 rounded-[8px] w-[40%]'>
-                <div className='mb-[2rem]'>
+            <form className='border p-4 px-6 rounded-[8px] w-full md:w-[40%]'>
+                <div className='mb-[2rem] text-center md:text-start'>
                     <h1 className='text-[#171A1FFF] text-[32px] font-bold'>Let's Get Started 🚀</h1>
                     <p className='text-[#9095A0FF] text-sm'>Sign up your account</p>
                 </div>
 
                 <section className='flex flex-col gap-4 mb-[5rem]'>
-                    <div className='form-field flex items-center gap-2 h-[44px] border-2 border-transparent hover:border-[#800e80] duration-500 bg-[#F3F4F6FF] rounded-[8px] px-4 py-2 min-w-[452px]'>
+                    <div className='form-field flex items-center gap-2 h-[44px] border-2 border-transparent hover:border-[#800e80] duration-500 bg-[#F3F4F6FF] rounded-[8px] px-4 py-2 w-full '>
                         <MdOutlineEmail className='text-gray-500' />
                         <input className='outline-none w-full h-full border-none bg-transparent focus-within:bg-transparent focus-visible:bg-transparent focus:bg-transparent placeholder:text-sm text-sm text-gray-500' type="email" placeholder='Enter your student email' />
                     </div>
-                    <div className='form-field flex items-center gap-2 h-[44px] border-2 border-transparent hover:border-[#800e80] duration-500 bg-[#F3F4F6FF] rounded-[8px] px-4 py-2 min-w-[452px]'>
+                    <div className='form-field flex items-center gap-2 h-[44px] border-2 border-transparent hover:border-[#800e80] duration-500 bg-[#F3F4F6FF] rounded-[8px] px-4 py-2 w-full'>
                         <RiLockPasswordLine className='text-gray-500' />
                         <input className='outline-none w-full h-full border-none bg-transparent focus-within:bg-transparent focus-visible:bg-transparent focus:bg-transparent placeholder:text-sm text-sm text-gray-500' type={showPassword ? 'text' : 'password'} placeholder='Enter your password' />
                     </div>
