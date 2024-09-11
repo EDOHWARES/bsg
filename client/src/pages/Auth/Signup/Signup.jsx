@@ -12,7 +12,7 @@ const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className='min-h-[80vh]'>
+    <div className='min-h-[80vh] py-8'>
         {showVerifyEmailModal && <VerifyEmail hideModal={() => setShowVerifyEmailModal(false)} />}
         <div className="content flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-between">
             <div className="img w-full md:w-[55%] flex flex-col gap-[1.5rem]">

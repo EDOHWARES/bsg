@@ -5,11 +5,14 @@ import Login from "./pages/Auth/Login/Login";
 import Signup from "./pages/Auth/Signup/Signup";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+  const hideHeaderFooterRoutes = ['/auth/signup']
   return (
     <>
-      <Header />
+      {!hideHeaderFooterRoutes.includes(location.pathname) && <Header />}
       <main className="px-2 md:px-10">
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,7 +20,7 @@ function App() {
         <Route path="/auth/signup" element={<Signup />} />
       </Routes>
       </main>
-      <Footer />
+      {!hideHeaderFooterRoutes.includes(location.pathname) && <Footer />}
     </>
   );
 }
