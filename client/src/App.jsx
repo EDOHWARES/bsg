@@ -6,11 +6,11 @@ import Signup from "./pages/Auth/Signup/Signup";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { useLocation } from "react-router-dom";
-import QuizPage from "./pages/QuizPage/QuizPage";
+import QuizPage from "./pages/Quiz/QuizPage";
 
 function App() {
   const location = useLocation();
-  const hideHeaderFooterRoutes = ['/auth/signup', '/etest']
+  const hideHeaderFooterRoutes = ['/auth/signup', '/etest/test', '/etest/dashboard', '/etest/leaderboard'];
   return (
     <>
       {!hideHeaderFooterRoutes.includes(location.pathname) && <Header />}
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/auth/login" element={<Login />} />
         <Route path="/auth/signup" element={<Signup />} />
-        <Route path="etest" element={<QuizPage />} />
+        <Route path="etest/*" element={<QuizPage />} />
       </Routes>
       </main>
       {!hideHeaderFooterRoutes.includes(location.pathname) && <Footer />}
