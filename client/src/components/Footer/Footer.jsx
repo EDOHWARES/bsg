@@ -18,22 +18,22 @@ const Footer = () => {
             </p>
           </div>
           <ul className="flex flex-col gap-1 w-full md:w-auto text-gray-600">
-            <li className="cursor-pointer border-b text-gray-800 border-b-[#800e80] duration-500 w-fit">
+            <li className="cursor-pointer border-b text-gray-800 border-b-primary duration-500 w-fit">
               Visit
             </li>
-            <li className="cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit">
+            <li className="cursor-pointer border-b border-b-transparent hover:border-b-primary duration-500 w-fit">
               Privacy policy
             </li>
-            <li className="cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit">
+            <li className="cursor-pointer border-b border-b-transparent hover:border-b-primary duration-500 w-fit">
               Contact us
             </li>
-            <li className="cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit">
+            <li className="cursor-pointer border-b border-b-transparent hover:border-b-primary duration-500 w-fit">
               Terms and conditions
             </li>
-            <li className="cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit">
+            <li className="cursor-pointer border-b border-b-transparent hover:border-b-primary duration-500 w-fit">
               Blogs
             </li>
-            <li className="cursor-pointer border-b border-b-transparent hover:border-b-[#800e80] duration-500 w-fit">
+            <li className="cursor-pointer border-b border-b-transparent hover:border-b-primary duration-500 w-fit">
               About us
             </li>
           </ul>
@@ -44,7 +44,7 @@ const Footer = () => {
                 type="email"
                 className="bg-white w-[20rem] indent-4 h-[3rem] rounded-[8px] border"
               />
-              <button className="flex items-center justify-center w-full text-white h-[3rem] px-4 rounded-[8px] bg-[#800e80]">
+              <button className="flex items-center justify-center w-full text-white h-[3rem] px-4 rounded-[8px] bg-primary hover:bg-primaryHover duration-500">
                 Subscribe
               </button>
             </form>

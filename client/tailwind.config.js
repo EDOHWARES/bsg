@@ -7,6 +7,11 @@ export default {
   theme: {
     extend: {
       screens: {
+      },
+      colors: {
+        primary: '#2C73A1',
+        primaryHover: '#254A77',
+        accent: '#F19413'
       }
     },
   },
