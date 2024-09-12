@@ -168,7 +168,37 @@ const verifyEmail = async (req, res) => {
 
 // Login User
 const loginUser = async (req, res) => {
-    
+    const {email, password} = req.body;
+
+    try {
+        const user = await userModel.findOne({email});
+
+        if (!user) return res.json({
+            success: false,
+            message: 'User does not exist!',
+        });
+
+        const passwordMatch = await bcryptjs.compare(password, user.password);
+        if (!passwordMatch) {
+            return res.json({
+                success: false,
+                message: 'Invalid password!',
+            });
+        };
+
+        const token = createToken(user._id);
+        return res.json({
+            success: true,
+            token,
+        });
+
+    } catch (error) {
+        res.json({
+            success: false,
+            message: 'Server error',
+            error: error.message,
+        });
+    };
 };
 
 export {registerUser, verifyEmail, loginUser};
