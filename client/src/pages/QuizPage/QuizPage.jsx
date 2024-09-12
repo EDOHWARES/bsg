@@ -30,10 +30,10 @@ const QuizPage = () => {
             </div>
             <div className="options">
                 <ul className='flex flex-col space-y-4'>
-                    <li onClick={() => setOption('option1')} className={`w-full border border-gray-400 rounded-md px-4 md:px-6 py-4 text-white hover:scale-95 hover:border-accent duration-500 cursor-pointer ${option == 'option1' ? 'font-bold text-accent border-accent' : ''}`}>Option one</li>
-                    <li onClick={() => setOption('option2')} className={`w-full border border-gray-400 rounded-md px-4 md:px-6 py-4 text-white hover:scale-95 duration-500 cursor-pointer hover:border-accent ${option == 'option2' ? 'font-bold text-accent border-accent' : ''}`}>Option two</li>
-                    <li onClick={() => setOption('option3')} className={`w-full border border-gray-400 rounded-md px-4 md:px-6 py-4 text-white hover:scale-95 duration-500 cursor-pointer hover:border-accent ${option == 'option3' ? 'font-bold text-accent border-accent' : ''}`}>Option two</li>
-                    <li onClick={() => setOption('option4')} className={`w-full border border-gray-400 rounded-md px-4 md:px-6 py-4 text-white hover:scale-95 duration-500 cursor-pointer hover:border-accent ${option == 'option4' ? 'font-bold text-accent border-accent' : ''}`}>Option two</li>
+                    <li onClick={() => setOption('option1')} className={`w-full border rounded-md px-4 md:px-6 py-4 hover:border-accent duration-500 cursor-pointer ${option == 'option1' ? 'font-bold text-accent border-accent' : 'text-white border-gray-400'}`}>Option one</li>
+                    <li onClick={() => setOption('option2')} className={`w-full border rounded-md px-4 md:px-6 py-4 duration-500 cursor-pointer hover:border-accent ${option == 'option2' ? 'font-bold text-accent border-accent' : 'text-white border-gray-400'}`}>Option two</li>
+                    <li onClick={() => setOption('option3')} className={`w-full border rounded-md px-4 md:px-6 py-4 duration-500 cursor-pointer hover:border-accent ${option == 'option3' ? 'font-bold text-accent border-accent' : 'text-white border-gray-400'}`}>Option two</li>
+                    <li onClick={() => setOption('option4')} className={`w-full border rounded-md px-4 md:px-6 py-4 duration-500 cursor-pointer hover:border-accent ${option == 'option4' ? 'font-bold text-accent border-accent' : 'text-white border-gray-400'}`}>Option two</li>
                 </ul>
             </div>
             <button className="next bg-primary hover:bg-primaryHover w-full px-4 py-4 rounded-md text-white mt-10 duration-500">Next Question</button>
