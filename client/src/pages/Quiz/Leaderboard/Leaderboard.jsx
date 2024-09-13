@@ -6,7 +6,7 @@ import { MdOutlineBatchPrediction } from "react-icons/md";
 
 const StatBox = ({amt, title}) => {
     return (
-        <div className='bg-secondary h-[9rem] rounded-md text-white p-2 text-start flex flex-col items-center justify-center hover:scale-[98%] duration-500'>
+        <div className='bg-secondary h-[9rem] rounded-md text-white p-2 text-center flex flex-col items-center justify-center hover:scale-[98%] duration-500'>
             <h1 className='font-bold text-2xl'>{amt}</h1>
             <p className='text-gray-400'>{title}</p>
         </div>
@@ -31,7 +31,7 @@ const Participant = ({icon, position, name, score, timeTaken}) => {
 
 const Leaderboard = () => {
   return (
-    <div className='text-white flex flex-col gap-6 mt-[2rem]'>
+    <div className='text-white flex flex-col gap-6'>
         <div className="actions flex items-center justify-end w-full gap-4">
             <select name="" id="" className='text-black py-2 p-4 rounded-[8px]'>
                 <option value="">Select course</option>
@@ -40,7 +40,7 @@ const Leaderboard = () => {
             </select>
             <button className='bg-accent px-4 py-2 rounded-[8px]'>Export as PDF</button>
         </div>
-        <div className="stats grid items-center grid-cols-4 gap-4">
+        <div className="stats grid items-center grid-cols-2 md:grid-cols-4 gap-4">
             <StatBox amt='311' title='Number of participants'/>
             <StatBox amt='3.1' title='Average score'/>
             <StatBox amt='39/40' title='Highest score'/>
@@ -49,7 +49,7 @@ const Leaderboard = () => {
         <div className="board flex flex-col gap-3">
             <h3 className='text-accent font-semibold tex'>Leaderboard</h3>
             <div className='flex flex-col'>
-                <ul className="hd grid grid-cols-[4fr_1fr_1fr] bg-secondary p-3 border border-primary border-b-transparent">
+                <ul className="hd text-sm md:text-base grid grid-cols-[4fr_1fr_1fr] bg-secondary p-3 border border-primary border-b-transparent">
                     <li>Participants</li>
                     <li>Score</li>
                     <li>Time Taken</li>
