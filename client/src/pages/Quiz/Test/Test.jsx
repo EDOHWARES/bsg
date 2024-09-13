@@ -1,10 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import ScientificCalculator from '../../../components/MathCalculator/Calculator';
 
-const Test = () => {
+const Test = ({showCalculator, hideCalc}) => {
     const [option, setOption] = useState('');
 
   return (
-    <section>
+    <section className='relative'>
+        {showCalculator && <div className='absolute z-50 right-0'>
+            <ScientificCalculator hideCalc={hideCalc}/>
+        </div>}
         <div className="total-timer w-full flex items-center mb-20 text-gray-300 gap-2">
                 <div className='w-[90%] h-[.1rem] bg-white '>
                     <p className='bg-accent h-full w-[60%]'></p>

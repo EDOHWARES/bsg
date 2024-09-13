@@ -22,7 +22,7 @@ const NavItems = ({title, icon, link}) => {
 }
 
 
-const Navbar = () => {
+const Navbar = ({showCalc}) => {
     
   return (
     <nav className='p-4 px-0 h-full bg-secondary flex flex-col justify-between shadow-2xl'>
@@ -40,7 +40,9 @@ const Navbar = () => {
         </div>
         <div className="down">
             <ul>
-                <NavItems title={'Calculator'} icon={<ImCalculator />} />
+                <div onClick={showCalc}>
+                    <NavItems title={'Calculator'} icon={<ImCalculator />} />
+                </div>
                 <div className='border border-accent'>
                     <NavItems title={'Profile'} icon={<BsPersonSquare />} />
                 </div>
