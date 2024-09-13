@@ -47,7 +47,7 @@ const Leaderboard = () => {
             <StatBox amt='1' title='Participant with highest score'/>
         </div>
         <div className="board flex flex-col gap-3">
-            <h3 className='text-accent font-semibold tex'>Leaderboard</h3>
+            <h3 className='text-accent font-semibold'>Leaderboard</h3>
             <div className='flex flex-col'>
                 <ul className="hd text-sm md:text-base grid grid-cols-[4fr_1fr_1fr] bg-secondary p-3 border border-primary border-b-transparent">
                     <li>Participants</li>

@@ -31,7 +31,7 @@ const data = [
 
 const RenderLineChart = () => {
   return (
-    <div className="w-full ml-[-2rem]">
+    <div className="w-full ml-[-2.2rem]">
       <ResponsiveContainer width={'100%'} height={300} >
       <BarChart data={data}>
         <CartesianGrid stroke="#ccc" />
@@ -48,13 +48,13 @@ const RenderLineChart = () => {
 
 const RecentActivity = ({ course, score, timeTaken }) => {
   return (
-    <ul className="grid grid-cols-[4fr_1fr_1fr] p-3 text-gray-300 text-sm text-center border border-t-transparent border-primary cursor-pointer hover:bg-primaryHover duration-500">
+    <ul className="grid grid-cols-[4fr_1fr_1fr] p-3 text-gray-300 text-sm border border-t-transparent border-primary cursor-pointer hover:bg-primaryHover duration-500">
       <li className="flex items-center gap-4">
         <MdLibraryBooks className="text-accent" />
         <p className="font-semibold">{course}</p>
       </li>
       <li>{score}</li>
-      <li className="text-end">{timeTaken}</li>
+      <li>{timeTaken}</li>
     </ul>
   );
 };
@@ -86,13 +86,13 @@ const Dashboard = () => {
             Recent Activites
           </h1>
           <p className="text-gray-300 text-sm mt-2">
-            Click course to see more details
+            Click on course to see more details
           </p>
           <div className="flex flex-col">
             <ul className="hd text-sm md:text-base grid grid-cols-[4fr_1fr_1fr] bg-secondary p-3 border text-gray-300 border-primary border-b-transparent">
               <li>Course</li>
-              <li className=" text-center">Avg. Performance</li>
-              <li className="text-end">Time Taken</li>
+              <li>Avg.</li>
+              <li>Time Taken</li>
             </ul>
             <div>
               <RecentActivity

@@ -16,7 +16,7 @@ const NavItems = ({title, icon, link}) => {
     return (
         <Link to={link} className={`flex px-4 flex-row items-center space-x-2 text-white text-base cursor-pointer py-2 ${location.pathname==link ? 'bg-primary' : 'bg-transparent'} hover:bg-primary  duration-500`}>
             {icon}
-            <span>{title}</span>
+            <span className='hidden md:block'>{title}</span>
         </Link>
     )
 }
@@ -29,7 +29,7 @@ const Navbar = () => {
     <div className='flex flex-col bg-transparent justify-between h-screen pb-[1rem]'>
         <div className='flex flex-col gap-6'>
             <div className='w-full flex items-center justify-center'>
-                <img src={images.logo} alt="logo" className='w-[4rem]' />
+                <img src={images.logo} alt="logo" className='max-w-[4rem]' />
             </div>
             <ul className='flex flex-col gap-2'>
                 <NavItems link={'/'} title={'Home'} icon={<AiFillHome />} />
