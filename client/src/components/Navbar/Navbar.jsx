@@ -43,7 +43,7 @@ const Navbar = ({showCalc}) => {
                 <div onClick={showCalc}>
                     <NavItems title={'Calculator'} icon={<ImCalculator />} />
                 </div>
-                <div className='border border-accent'>
+                <div className='border'>
                     <NavItems title={'Profile'} icon={<BsPersonSquare />} />
                 </div>
             </ul>

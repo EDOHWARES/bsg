@@ -15,7 +15,7 @@ const StatBox = ({amt, title}) => {
 
 const Participant = ({icon, position, name, score, timeTaken}) => {
     return (
-        <ul className='grid grid-cols-[4fr_1fr_1fr] p-3 text-gray-300 text-sm border border-t-transparent border-primary'>
+        <ul className='grid grid-cols-[4fr_1fr_1fr] p-3 text-gray-300 text-sm border border-t-transparent border-[#2c72a14c]'>
             <li className='flex items-center gap-4'>
                 <p className='text-xl'>{icon}</p>
                 <p className='text-accent'>{position}</p>
@@ -49,7 +49,7 @@ const Leaderboard = () => {
         <div className="board flex flex-col gap-3">
             <h3 className='text-accent font-semibold'>Leaderboard</h3>
             <div className='flex flex-col'>
-                <ul className="hd text-sm md:text-base grid grid-cols-[4fr_1fr_1fr] bg-secondary p-3 border border-primary border-b-transparent">
+                <ul className="hd text-sm md:text-base grid grid-cols-[4fr_1fr_1fr] bg-secondary p-3 border border-[#2c72a17c] border-b-transparent">
                     <li>Participants</li>
                     <li>Score</li>
                     <li>Time Taken</li>

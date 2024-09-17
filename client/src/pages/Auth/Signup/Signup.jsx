@@ -5,6 +5,7 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import VerifyEmail from './VerifyEmail';
 import { IoEyeOffSharp } from "react-icons/io5";
 import { MdRemoveRedEye } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -12,14 +13,10 @@ const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className='min-h-[100vh] py-8'>
+    <div className='min-h-[100vh] py-8 mt-[7rem]'>
         {showVerifyEmailModal && <VerifyEmail hideModal={() => setShowVerifyEmailModal(false)} />}
-        <div className="content flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-between">
-            <div className="img w-full md:w-[55%] flex flex-col gap-[1.5rem]">
-                <img className='rounded-[8px] hover:scale-95 duration-500' src={images.students} alt="auth image" />
-                <p className='kaushan text-center text-2xl'>Brainstorm the present, Master the past, Ace the future!</p>
-            </div>
-            <form className='border p-4 px-6 rounded-[8px] w-full md:w-[40%]'>
+        <div className="content">
+            <form className='border p-4 px-6 rounded-[8px] w-full md:w-[60%] mx-auto'>
                 <div className='mb-[2rem] text-center md:text-start'>
                     <h1 className='text-[#171A1FFF] text-[32px] font-bold'>Let's Get Started 🚀</h1>
                     <p className='text-[#9095A0FF] text-sm'>Sign up your account</p>
@@ -40,7 +37,7 @@ const Signup = () => {
                     </div>
                 </section>
 
-                <p className='text-center'>Already have an account ? <span className='text-primary hover:text-primaryHover duration-500 cursor-pointer font-semibold'>Login</span></p>
+                <p className='text-center'>Already have an account ? <Link to={'/auth/login'} className='text-primary hover:text-primaryHover duration-500 cursor-pointer font-semibold'>Login</Link></p>
             </form>
         </div>
     </div>
