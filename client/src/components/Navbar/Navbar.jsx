@@ -2,8 +2,7 @@ import React from 'react';
 import { images } from '../../assets/assets';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-
-import { AiFillHome } from "react-icons/ai";
+import { FaBookReader } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import { MdLeaderboard } from "react-icons/md";
 import { ImCalculator } from "react-icons/im";
@@ -32,10 +31,10 @@ const Navbar = ({showCalc}) => {
                 <img src={images.logo} alt="logo" className='max-w-[4rem]' />
             </div>
             <ul className='flex flex-col gap-2'>
-                <NavItems link={'/'} title={'Home'} icon={<AiFillHome />} />
-                <NavItems link={'/test'} title={'Take Test'} icon={<PiExamFill />} />
-                <NavItems link={'/dashboard'} title={'Dashboard'} icon={<MdDashboard />} />
-                <NavItems link={'/leaderboard'} title={'Leaderboard'} icon={<MdLeaderboard />} />
+                <NavItems link={'/room'} title={'Room'} icon={<FaBookReader />} />
+                <NavItems link={'/room/test'} title={'Take Test'} icon={<PiExamFill />} />
+                <NavItems link={'/room/dashboard'} title={'Dashboard'} icon={<MdDashboard />} />
+                <NavItems link={'/room/leaderboard'} title={'Leaderboard'} icon={<MdLeaderboard />} />
             </ul>
         </div>
         <div className="down">
