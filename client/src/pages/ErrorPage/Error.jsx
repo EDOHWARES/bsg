@@ -1,5 +1,6 @@
 import React from 'react';
-import {images} from '../../assets/assets'
+import {images} from '../../assets/assets';
+import { Link } from 'react-router-dom';
 
 const Error = () => {
   return (
@@ -10,7 +11,7 @@ const Error = () => {
           <img className='md:w-[32rem]' src={images.aloneimg} alt="alone-png" />
         </div>
           <p className='text-gray-700 mb-[1rem]'>Sorry, this page isn't available - it looks missing.</p>
-          <button className='bg-primary hover:bg-primaryHover duration-500 py-2 px-4 rounded-md text-white '>Go Home</button>
+          <Link to={'/'}><button className='bg-primary hover:bg-primaryHover duration-500 py-2 px-4 rounded-md text-white '>Go Home</button></Link>
       </div>
     </section>
   )
