@@ -21,3 +21,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`server started on http://localhost:${port}`);
 });
+
+// mongodb+srv://edohemmanuel4real:bsgdatabase@cluster0.ywlay.mongodb.net/?retryWrites=true&w=majority&appName=bsg

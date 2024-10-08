@@ -12,14 +12,17 @@ import News from "./pages/News/News";
 import Blogs from "./pages/Blogs/Blogs";
 import Error from "./pages/ErrorPage/Error";
 import { Footer } from "./components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  // const location = useLocation();
-  // const hideHeaderFooterRoutes = ['/auth/signup', '/'];
+  const location = useLocation();
+  const hideHeaderFooterRoutes = ['/room', '/room/test', '/room/dashboard', '/room/leaderboard'];
   return (
-    <>
+    <section>
+    <ToastContainer />
       <main className="px-2 md:px-10">
-      <Header />
+      {!hideHeaderFooterRoutes.includes(location.pathname) && <Header />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/room/*" element={<Room />} />
@@ -32,9 +35,8 @@ function App() {
         <Route path="*" element={<Error/>} />
       </Routes>
       </main>
-      <Footer/>
-      {/* {!hideHeaderFooterRoutes.includes(location.pathname) && <Footer />} */}
-    </>
+      {!hideHeaderFooterRoutes.includes(location.pathname) && <Footer />}
+    </section>
   );
 }
 

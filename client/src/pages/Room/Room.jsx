@@ -4,8 +4,8 @@ import {Routes, Route} from 'react-router-dom';
 import Dashboard from '../Quiz/Dashboard/Dashboard';
 import Leaderboard from '../Quiz/Leaderboard/Leaderboard';
 import Test from '../Quiz/Test/Test';
-import HomePage from '../HomePage/HomePage';
 import Error from '../ErrorPage/Error';
+import RoomHome from '../RoomHome/RoomHome';
 
 const Room = () => {
   const [showCalculator, setShowCalculator] = useState(false);
@@ -17,7 +17,7 @@ const Room = () => {
       </div>
         <div className='py-10 w-[88%]'>
             <Routes>
-                <Route path='/' element={<HomePage />} />
+                <Route path='/' element={<RoomHome/>} />
                 <Route path='/test' element={<Test showCalculator={showCalculator} hideCalc={() => setShowCalculator(false)} />} /> 
                 <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/leaderboard' element={<Leaderboard />} />
