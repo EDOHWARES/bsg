@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { images } from '../../../assets/assets';
 import { MdOutlineEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -13,6 +13,7 @@ import {toast} from 'react-toastify'
 const Signup = () => {
 
     const url = 'http://localhost:3001/api/user/register';
+    const [count, setCount] = useState(180);
     const [showVerifyEmailModal, setShowVerifyEmailModal] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [continueLoading, setContinueLoading] = useState(false);
@@ -37,6 +38,7 @@ const Signup = () => {
         if (resp.data.success) {
             setContinueLoading(false);
             toast.success(resp.data.message);
+            setCount(180);
             setShowVerifyEmailModal(true);
         } else {
             setContinueLoading(false);
@@ -46,10 +48,24 @@ const Signup = () => {
     };
 
 
+    useEffect(() => {
+        const countdown = setInterval(() => {
+          setCount((prevCount) => {
+            if (prevCount > 0) {
+              return prevCount - 1;
+            } else {
+              clearInterval(countdown);
+              return 0;
+            }
+          });
+        }, 1000);
+  
+        return () => clearInterval(countdown);
+      }, []);
 
   return (
     <div className='min-h-[100vh] py-8 mt-[7rem]'>
-        {showVerifyEmailModal && <VerifyEmail hideModal={() => setShowVerifyEmailModal(false)} />}
+        {showVerifyEmailModal && Number(count)>0 && <VerifyEmail count={count} hideModal={() => setShowVerifyEmailModal(false)} />}
         <div className="content">
             <form onSubmit={handleFormSubmission} className='border p-4 px-6 rounded-[8px] w-full md:w-[60%] mx-auto'>
                 <div className='mb-[2rem] text-center md:text-start'>

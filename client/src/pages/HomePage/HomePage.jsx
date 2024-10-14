@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaFilePdf } from "react-icons/fa";
 import { FaNewspaper } from "react-icons/fa6";
 import { SiTestcafe } from "react-icons/si";
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,7 +29,9 @@ const HomePage = () => {
           <h1 className='text-5xl font-semibold text-[#101828]'>All in one platform to boost your <br className='hidden md:block' /> academic performance</h1>
           <p className='mt-[1rem]'>Free to use. Easy to try. Just get started.</p>
           <p>BSG focuses on providing you with upto-date info and an avenue to practice for <br /> upcoming tests and exams with well sorted data.</p>
-          <button className='bg-primary px-4 py-2 text-white mt-[2rem] rounded-[8px] hover:scale-105 duration-500'>Visit BSG ROOM</button>
+          <Link to={'/room'}>
+            <button className='bg-primary px-4 py-2 text-white mt-[2rem] rounded-[8px] hover:scale-105 duration-500'>Visit BSG ROOM</button>
+          </Link>
         </div>
 
         <div className='text-center flex flex-col gap-10'>
